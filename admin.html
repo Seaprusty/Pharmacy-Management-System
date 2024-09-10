@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - ABC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #063e22;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .sidebar {
+            background-color: #0f7737;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            overflow-y: auto;
+            padding-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        .sidebar ul {
+            list-style-type: none;
+        }
+        .sidebar li {
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar li:hover {
+            background-color: #95a0ac;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            margin-top: 70px;
+            transition: margin-left 0.3s ease;
+        }
+        .content h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #2f0672;
+        }
+        .content p {
+            font-size: 16px;
+        }
+        /* Sidebar Toggle Button */
+        .toggle-btn {
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            display: none;
+        }
+        /* Admin Icon Dropdown */
+        .admin-icon {
+            position: relative;
+            display: inline-block;
+        }
+        .admin-icon i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .admin-icon:hover .dropdown-content {
+            display: block;
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .content {
+                margin-left: 200px;
+            }
+            .toggle-btn {
+                display: block;
+            }
+        }
+        @media (max-width: 576px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 70px;
+                left: 0;
+            }
+            .content {
+                margin-left: 0;
+            }
+        }
+        .sidebar-active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </span>
+        <h1>PharmaExpect - Admin: ABC</h1>
+        <div class="admin-icon">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-content">
+                <a href="adminprofileupdate.html">Profile</a>
+                <a href="#">Settings</a>
+                <a href="frontpage.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders Manage</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Feedback reports</a></li>
+            <li><a href="vieword.html">View Orders</a></li> <!-- New row added here -->
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Welcome to PharmaExpect Admin Panel, ABC</h2>
+        <p>This is the admin dashboard where you can manage your orders, inventory, customers, and more.</p>
+    </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('sidebar-active');
+        }
+    </script>
+</body>
+</html>

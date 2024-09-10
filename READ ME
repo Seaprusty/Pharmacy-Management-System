@@ -1,0 +1,15 @@
+Extract the Zip in xampp/htdocs
+
+Open your xampp control panel and start Apache and Sql services
+
+Go to localhost
+
+Go to phpMyAdmin
+
+create a new database name :pharmacy
+
+import the db from pharmacy.sql (You will find it in htdocs/project/admin)
+
+after importing go to localhost type your project name:  localhost/project  
+
+register yourself and LOGIN

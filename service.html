@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaExpert - Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, rgba(0, 170, 255, 0.8), rgba(0, 68, 255, 0.8));
+            --secondary-gradient: linear-gradient(135deg, rgba(0, 188, 212, 0.8), rgba(0, 129, 194, 0.8));
+            --text-color: #ffffff;
+            --background-color: #4f2980;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+            --header-height: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-gradient);
+            color: var(--text-color);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav .nav-link:hover {
+            color: #4CAF50; /* Adjust this color to match your style */
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/depositphotos_479684206-stock-photo-happy-senior-female-pharmacist-explaining.jpg') no-repeat center center;
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay to improve text contrast */
+            z-index: 1;
+        }
+
+        .hero h2,
+        .hero p {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h2 {
+            font-size: 56px;
+            margin: 0;
+            animation: fadeInDown 1s;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 28px;
+            margin: 10px 0 20px;
+            animation: fadeInUp 1s;
+            font-weight: 500;
+        }
+
+        .hero a {
+            background: var(--secondary-gradient);
+            color: var(--text-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: var(--transition);
+            animation: fadeIn 1.5s;
+            font-size: 18px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero a:hover {
+            background: var(--text-color);
+            color: var(--secondary-gradient);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background: var(--primary-gradient);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: var(--transition);
+        }
+
+        footer .social-icons a:hover {
+            color: #4CAF50; /* Adjust this color to match your style */
+        }
+
+        /* Service Section Styles */
+        .service {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 0; /* Adjusted padding */
+        }
+        
+        .service-item {
+            flex: 1 1 calc(30% - 20px); /* Adjusted for a three-column layout */
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)), url('./img/default-bg.jpg') no-repeat center center; /* Gradient background */
+            background-size: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            transition: transform 0.3s ease;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 500px;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text contrast */
+            z-index: 0;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-item h2,
+        .service-item p {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+        }
+
+        .service-item h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .service-item p {
+            font-size: 1.3rem;
+            color: #eee;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .service-item[data-bg="1"] {
+            background-image: url('./img/1.jpg');
+        }
+
+        .service-item[data-bg="2"] {
+            background-image: url('./img/2.jpg');
+        }
+
+        .service-item[data-bg="3"] {
+            background-image: url('./img/3.jpg');
+        }
+
+        .service-item[data-bg="4"] {
+            background-image: url('./img/4.jpg');
+        }
+
+        .service-item[data-bg="5"] {
+            background-image: url('./img/5.jpg');
+        }
+
+        .service-item[data-bg="6"] {
+            background-image: url('./img/6.jpg');
+        }
+
+        .service-item[data-bg="7"] {
+            background-image: url('./img/7.jpg');
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-right: 20px;
+            color: #4CAF50;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover .icon {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="logo.png" alt="PharmaExpert Logo"> PharmaExpert</h1>
+        </div>
+        <nav>
+            <a href="frontpage.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="service.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a>
+            <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+        
+            <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i>Gallery</a>
+            <a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="contactus.html" class="nav-link"><i class="fas fa-address-book"></i> Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="service">
+            <div class="service-item" data-bg="1">
+                <h2>Inventory Management</h2>
+                <p>Efficiently manage your pharmacy's inventory, track stock levels, and receive automatic alerts for low stock items.</p>
+            </div>
+            <div class="service-item" data-bg="2">
+                <h2>Prescription Management</h2>
+                <p>Streamline the process of managing prescriptions, including filling, refilling, and tracking prescription history.</p>
+            </div>
+            <div class="service-item" data-bg="3">
+                <h2>Customer Management</h2>
+                <p>Manage customer profiles, prescription history, and provide personalized services to enhance customer satisfaction.</p>
+            </div>
+            <div class="service-item" data-bg="4">
+                <h2>Reporting and Analytics</h2>
+                <p>Generate detailed reports and analytics to gain insights into sales trends, inventory turnover, and other key metrics.</p>
+            </div>
+            <div class="service-item" data-bg="5">
+                <h2>Point of Sale (POS)</h2>
+                <p>Efficiently process sales transactions, accept various payment methods, and integrate seamlessly with your pharmacy management system.</p>
+            </div>
+            <div class="service-item" data-bg="6">
+                <h2>Integration and Customization</h2>
+                <p>Integrate third-party systems and customize the pharmacy management system to meet the unique needs of your pharmacy.</p>
+            </div>
+            <div class="service-item" data-bg="7">
+                <h2>Medication Consultation</h2>
+                <p>Offer personalized medication consultation services to help patients understand their prescriptions, potential side effects, and usage instructions.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PharmaExpert. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PharmaExpert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, rgba(0, 170, 255, 0.8), rgba(0, 68, 255, 0.8));
+            --secondary-gradient: linear-gradient(135deg, rgba(0, 188, 212, 0.8), rgba(0, 129, 194, 0.8));
+            --text-color: #ffffff;
+            --background-color: rgb(241, 241, 245);
+            --border-radius: 12px;
+            --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+            --header-height: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-gradient);
+            color: var(--text-color);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav .nav-link:hover {
+            color: #4CAF50; /* Adjust this color to match your style */
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px 40px;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            background-color: var(--background-color);
+        }
+
+        h1, h2 {
+            color: var(--primary-gradient);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            background: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid var(--primary-gradient);
+            transition: background 0.3s ease;
+        }
+
+        ul li:hover {
+            background: #d5dbdb;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background: var(--primary-gradient);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .social-media a:hover {
+            color: #4CAF50; /* Adjust this color to match your style */
+        }
+
+        .store-location {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .testimonial {
+            background: #f9f9f9;
+            border-left: 5px solid var(--primary-gradient);
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: var(--box-shadow);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="/gallery/logo.png" alt="PharmaExpert Logo"> PharmaExpert</h1>
+        </div>
+        <nav>
+            <a href="frontpage.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="service.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a>
+            <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            
+            <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i>Gallery</a>
+            <a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="contactus.html" class="nav-link"><i class="fas fa-address-book"></i> Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <img src="/gallery/our.jpg" alt="PharmaExpert, Bangalore">
+        <p><strong>PharmaExpert, Bangalore</strong> is one of India's leading pharmacies, renowned for its commitment to quality healthcare services and customer satisfaction. Established in 1972, we have been dedicated to providing exceptional pharmaceutical care to the community for over five decades.</p>
+        
+        <h2>Our History</h2>
+        <p>Since its inception in 1972, PharmaExpert, Bangalore has been a beacon of excellence in healthcare. Founded by Dr. Rahul N, a visionary pharmacist with a passion for serving the community, PharmaExpect has grown from humble beginnings into one of the most respected pharmacies in the region. Over the past five decades, we have remained steadfast in our commitment to providing exceptional pharmaceutical care, fostering innovation, and promoting the well-being of our customers.</p>
+        <p>From pioneering new healthcare initiatives to expanding our reach across Bangalore and beyond, PharmaExpect has continually evolved to meet the changing needs of our diverse and dynamic community. Today, we stand as a testament to the enduring values of integrity, compassion, and excellence that have defined us since day one.</p>
+
+        <h2>Our Mission</h2>
+        <p>At PharmaExpert, Bangalore, our mission is simple yet profound: to empower individuals and communities to lead healthier, happier lives. We strive to achieve this mission by providing unparalleled pharmaceutical services, fostering a culture of compassion and integrity, and embracing innovation at every turn.</p>
+        <p>Every day, we are driven by a shared commitment to excellence, guided by the belief that healthcare is not just about treating illnesses, but about nurturing well-being in body, mind, and spirit. Our mission extends beyond the confines of our pharmacy walls, as we actively engage with our community through health education programs, outreach initiatives, and collaborative partnerships.</p>
+        <p>Ultimately, our mission is not just about delivering medicines; it's about making a meaningful difference in the lives of those we serve. We are dedicated to being a trusted partner on the journey to better health, providing compassionate care, personalized attention, and innovative solutions to meet the diverse needs of our customers.</p>
+
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services, including:</p>
+        <ul>
+            <li>Prescription fulfillment and consultation</li>
+            <li>Over-the-counter medications</li>
+            <li>Health and wellness products</li>
+            <li>Personalized health advice and management</li>
+            <li>Community health programs and workshops</li>
+            <li>Home delivery of medicines</li>
+            <li>Vaccination services</li>
+            <li>Health screening and diagnostic services</li>
+        </ul>
+
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="/gallery/white.png" alt="Dr. Ayush Kumar" width="100" height="100">
+            <div>
+                <h3>Dr. Ayush Kumar</h3>
+                <p>Chief Pharmacist</p>
+                <p>With over 20 years of experience, Dr. Ayush Kumar leads our team with a commitment to excellence and patient care. His expertise and compassionate approach have made him a trusted figure in the community.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="/gallery/ryan.jpg" alt="Mr. Ravi Sharma" width="100" height="100">
+            <div>
+                <h3>Dr. Ravi Sharma</h3>
+                <p>Pharmacy Manager</p>
+                <p>Ravi Sharma ensures the smooth operation of our pharmacy, managing everything from inventory to customer service. His dedication to efficiency and quality makes a significant impact on our daily operations.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="/gallery/mad.jpg" alt="Dr. Niraj Patel" width="100" height="100">
+            <div>
+                <h3>Dr. Niraj Patel</h3>
+                <p>Senior Pharmacist</p>
+                <p>Dr. Niraj Patel brings a wealth of knowledge and a caring touch to our pharmacy team. His focus on personalized patient care helps ensure that all our customers receive the best possible service.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="/gallery/keanu.jpg" alt="Dr. John Doe" width="100" height="100">
+            <div>
+                <h3>Dr. John Doe</h3>
+                <p>Senior Pharmacist</p>
+                <p>Dr. John Doe brings extensive experience and a compassionate approach to our pharmacy team. His dedication to patient care ensures that our customers receive the highest quality service.</p>
+            </div>
+        </div>
+
+        <h2>Community Involvement</h2>
+        <p>We believe in giving back to the community. PharmaExpert, Bangalore is actively involved in various health awareness programs, free medical camps, and community health initiatives. We work closely with local organizations to promote health and well-being in our community.</p>
+
+        <h2>Our Partnerships</h2>
+        <p>We have established strong partnerships with leading healthcare providers and organizations to enhance our service offerings. These partnerships enable us to provide comprehensive care and access to a wide range of healthcare resources for our customers.</p>
+        <ul>
+            <li><a href="https://bmcribengaluru.karnataka.gov.in/english" target="_blank">Partnership with Bangalore Medical College</a> for specialized medication and Research</li>
+            <li><a href="https://nhm.gov.in/" target="_blank">Collaboration with Ministry Of Health and Family Welfare</a> for vaccination drives</li>
+            <li><a href="https://www.uhc.com/health-and-wellness" target="_blank">Affiliation with health and wellness centers</a> for holistic care and mental wellness</li>
+        </ul>
+
+        <h2>Customer Reviews</h2>
+        <div class="testimonial">
+            <p><strong>Rajesh Kumar:</strong> "PharmaExpert has been my go-to pharmacy for years. The staff is incredibly knowledgeable and always ready to help. Their commitment to customer service is unmatched."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Neha Singh:</strong> "I appreciate the personalized care I receive at PharmaExpert. They always take the time to explain my medications and answer any questions I have. Highly recommend!"</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Vikram Rao:</strong> "Their community health programs have been a great resource for our neighborhood. It's wonderful to see a pharmacy so dedicated to the well-being of its customers."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Anjali Mehta:</strong> "The home delivery service is a lifesaver, especially for my elderly parents. They get their medications on time without any hassle. Thank you, PharmaExpert!"</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Ravi Kapoor:</strong> "Excellent service and a friendly team. They have a great selection of health products and the pharmacists are always willing to help with any concerns."</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/pharmaexpert" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.twitter.com/pharmaexpert" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/pharmaexpert" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/company/pharmaexpert" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+        <p class="store-location">Store Location: 123 Main Street, Brigade Road, Bangalore, India</p>
+        <p>&copy; PharmaExpert. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

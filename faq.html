@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - PharmaExpert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, rgba(0, 170, 255, 0.8), rgba(0, 68, 255, 0.8));
+            --secondary-gradient: linear-gradient(135deg, rgba(0, 188, 212, 0.8), rgba(0, 129, 194, 0.8));
+            --text-color: #ffffff;
+            --background-color: rgb(248, 252, 255);
+            --border-radius: 12px;
+            --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+            --header-height: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+            padding-top: var(--header-height);
+        }
+
+        header {
+            background: var(--primary-gradient);
+            color: var(--text-color);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: var(--header-height);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 {
+            font-size: 32px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content h1 img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav .nav-link:hover {
+            color: #4CAF50; /* Adjust this color to match your style */
+            text-decoration: underline;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .faq-container h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: var(--primary-gradient);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            color: var(--primary-gradient);
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            display: none;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        footer {
+            background: var(--primary-gradient);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><img src="logo.png" alt="PharmaExpert Logo"> PharmaExpert</h1>
+        </div>
+        <nav>
+            <a href="frontpage.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="service.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a>
+            <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle"></i> About Us</a>
+            
+            <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i>Gallery</a>
+            <a href="faq.html" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="contactus.html" class="nav-link"><i class="fas fa-address-book"></i> Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>What services does PharmaExpert offer?</h3>
+            <p>PharmaExpert provides a range of pharmacy management services including prescription management, inventory control, patient records management, billing, and reporting. Our system is designed to streamline pharmacy operations, improve efficiency, and enhance patient care.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I get started with PharmaExpert?</h3>
+            <p>To get started, visit our website and sign up for a free demo or contact our sales team for more information. We offer various packages and can tailor our solutions to fit your specific needs. Once you choose a package, our team will guide you through the setup process.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is PharmaExpert compatible with my existing systems?</h3>
+            <p>Yes, PharmaExpert is designed to integrate seamlessly with a variety of existing systems. We offer integration services to ensure that our system works smoothly with your current setup, including electronic health records (EHR), point-of-sale (POS) systems, and other pharmacy management tools.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What kind of support does PharmaExpert offer?</h3>
+            <p>PharmaExpert provides 24/7 customer support via phone, email, and live chat. We also offer comprehensive training for your staff and provide resources such as user manuals and video tutorials. Our support team is dedicated to resolving any issues quickly and efficiently.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How secure is PharmaExpert?</h3>
+            <p>PharmaExpert prioritizes the security of your data. We use advanced encryption methods to protect sensitive information and comply with industry standards such as HIPAA for data privacy. Our system includes robust access controls and regular security audits to ensure your data is safe.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I customize PharmaExpert to fit my pharmacy's needs?</h3>
+            <p>Absolutely! PharmaExpert is highly customizable to meet the specific requirements of your pharmacy. Whether you need custom reports, unique workflow processes, or specialized features, our development team can work with you to create a solution that fits your needs.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What are the system requirements for using PharmaExpert?</h3>
+            <p>PharmaExpert is compatible with most modern operating systems and web browsers. For optimal performance, we recommend using the latest versions of Chrome, Firefox, or Safari on a computer with at least 4GB of RAM and a stable internet connection. For more detailed system requirements, please contact our support team.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How can I request a feature or provide feedback?</h3>
+            <p>We welcome your feedback and feature requests! You can submit your suggestions through our contact form on the website or email us directly. Our development team reviews all feedback and considers it for future updates to ensure our system continues to meet your needs.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What is the pricing model for PharmaExpert?</h3>
+            <p>PharmaExpert offers a variety of pricing plans based on the size and needs of your pharmacy. We provide both subscription-based and one-time purchase options. For a detailed quote and to discuss the best plan for your pharmacy, please contact our sales team.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I contact PharmaExpert for further inquiries?</h3>
+            <p>You can contact us through our website's contact form, by email at support@pharmaexpert.com, or by phone at (123) 456-7890. Our customer service team is available to assist you with any questions or concerns you may have.</p>
+        </div>
+
+        <!-- Add more FAQ items as needed -->
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PharmaExpert. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item h3');
+
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
